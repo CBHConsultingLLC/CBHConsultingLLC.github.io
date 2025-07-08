@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CBH Consulting LLC</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://unpkg.com/tabulator-tables@5.5.0/dist/css/tabulator.min.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  
+
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f8f9fa;
     }
+
     header {
       background-color: #064B76;
       color: white;
       padding: 1rem 1rem;
     }
+
     .nav-link {
       cursor: pointer;
     }
+
     .header-content {
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
     }
+
     .header-content svg {
       position: absolute;
       left: 0;
@@ -34,26 +39,31 @@
       height: 50px;
       margin-left: 1rem;
     }
+
     .header-content h1 {
       margin: 0;
       text-align: center;
       width: 100%;
     }
-	
+
     .section {
       display: none;
       padding: 2rem 0;
     }
+
     .section.active {
       display: block;
     }
+
     .btn-demo {
       background-color: #F5B218;
       border: none;
     }
+
     .btn-demo:hover {
       background-color: #d49d15;
     }
+
     footer {
       text-align: center;
       padding: 2rem;
@@ -61,8 +71,62 @@
       color: #777;
       background-color: #f1f1f1;
     }
+
+    .card {
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card .carousel,
+    .card-img-top {
+      height: 210px;
+      min-height: 210px;
+      max-height: 210px;
+      overflow: hidden;
+      border-top-left-radius: 0.375rem;
+      border-top-right-radius: 0.375rem;
+    }
+
+    .card .carousel-inner,
+    .card .carousel-item,
+    .card .carousel-item img {
+      height: 210px;
+      min-height: 210px;
+      max-height: 210px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      flex: 1 1 auto;
+      height: 120px;
+      min-height: 120px;
+      max-height: 120px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .card-footer {
+      height: 56px;
+      min-height: 56px;
+      max-height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      background: #f8f9fa;
+      border-top: 1px solid #e9ecef;
+    }
+
+    .carousel-control-prev-icon {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+    }
+    .carousel-control-next-icon {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");    }
   </style>
 </head>
+
 <body>
   <header>
     <div class="header-content">
@@ -83,7 +147,7 @@
       <h2>CBH Consulting</h2>
       <p>Hi!</p>
     </section>
-	
+
     <section id="about" class="section">
       <h2>About Me</h2>
       <p>This is a brief bio about your background, skills, and areas of interest.</p>
@@ -100,27 +164,82 @@
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         <div class="col">
           <div class="card">
-            <img src="projects/fs-inventory-dash/assets/fs-inventory-dash.svg" class="card-img-top" alt="Inventory Tracker">
+            <!-- Carousel for Inventory Tracker -->
+            <div id="inventoryCarousel" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="projects\fs-inventory-dash\assets\fs_inventory_listing_rpt.png" class="d-block w-100 inventory-preview" alt="Floorstock Inventory Report" data-bs-toggle="modal" data-bs-target="#inventoryModal" data-img="projects\fs-inventory-dash\assets\fs_inventory_listing_rpt.png">
+                </div>
+                <div class="carousel-item">
+                  <img src="projects\fs-inventory-dash\assets\fs_changes_listing_rpt.png" class="d-block w-100 inventory-preview" alt="Floorstock Changes Report" data-bs-toggle="modal" data-bs-target="#inventoryModal" data-img="projects\fs-inventory-dash\assets\fs_changes_listing_rpt.png">
+                </div>
+                <div class="carousel-item">
+                  <img src="projects\fs-inventory-dash\assets\fs_changes_listing_download.png" class="d-block w-100 inventory-preview" alt="Floorstock Changes Download" data-bs-toggle="modal" data-bs-target="#inventoryModal" data-img="projects\fs-inventory-dash\assets\fs_changes_listing_download.png">
+                </div>
+              </div>
+              <button class="carousel-control-prev " type="button" data-bs-target="#inventoryCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true" style="color:black !important;"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#inventoryCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
             <div class="card-body">
               <h5 class="card-title">Inventory Tracker</h5>
               <p class="card-text">A browser-based tool to track pharmacy inventory and usage.</p>
             </div>
+
             <div class="card-footer text-end">
-              <a href="https://github.com/YOUR_USERNAME/inventory-tracker" target="_blank" class="btn btn-outline-primary me-2">GitHub</a>
-              <a href="https://YOUR_USERNAME.github.io/inventory-tracker/" target="_blank" class="btn btn-demo">Live Demo</a>
+              <a href="https://github.com/YOUR_USERNAME/inventory-tracker" target="_blank"
+                class="btn btn-outline-primary me-2">GitHub</a>
+              <a href="https://YOUR_USERNAME.github.io/inventory-tracker/" target="_blank" class="btn btn-demo">Live
+                Demo</a>
             </div>
+
           </div>
         </div>
 
         <div class="col">
           <div class="card">
-            <img src="projects/ccl-viewer/assets/ccl-viewer.svg" class="card-img-top" alt="CCL Viewer">
+            <!-- Carousel for CCL Reporting -->
+            <div id="cclCarousel" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="https://via.placeholder.com/800x200?text=CCL+Report+1" class="d-block w-100 ccl-preview"
+                    alt="CCL Report Preview 1" data-bs-toggle="modal" data-bs-target="#cclModal"
+                    data-img="https://via.placeholder.com/1200x600?text=CCL+Report+1">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://via.placeholder.com/800x200?text=CCL+Report+2" class="d-block w-100 ccl-preview"
+                    alt="CCL Report Preview 2" data-bs-toggle="modal" data-bs-target="#cclModal"
+                    data-img="https://via.placeholder.com/1200x600?text=CCL+Report+2">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://via.placeholder.com/800x200?text=CCL+Report+3" class="d-block w-100 ccl-preview"
+                    alt="CCL Report Preview 3" data-bs-toggle="modal" data-bs-target="#cclModal"
+                    data-img="https://via.placeholder.com/1200x600?text=CCL+Report+3">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#cclCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#cclCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
             <div class="card-body">
               <h5 class="card-title">CCL Reporting</h5>
               <p class="card-text">View, edit, and test Cerner CCL scripts in the browser.</p>
             </div>
             <div class="card-footer text-end">
-              <a href="https://github.com/YOUR_USERNAME/ccl-viewer" target="_blank" class="btn btn-outline-primary me-2">GitHub</a>
+              <a href="https://github.com/YOUR_USERNAME/ccl-viewer" target="_blank"
+                class="btn btn-outline-primary me-2">GitHub</a>
               <a href="https://YOUR_USERNAME.github.io/ccl-viewer/" target="_blank" class="btn btn-demo">Live Demo</a>
             </div>
           </div>
@@ -134,27 +253,31 @@
               <p class="card-text">A test interface for building and rendering Cerner mPage HTML components.</p>
             </div>
             <div class="card-footer text-end">
-              <a href="https://github.com/YOUR_USERNAME/mpage-template" target="_blank" class="btn btn-outline-primary me-2">GitHub</a>
-              <a href="https://YOUR_USERNAME.github.io/mpage-template/" target="_blank" class="btn btn-demo">Live Demo</a>
+              <a href="https://github.com/YOUR_USERNAME/mpage-template" target="_blank"
+                class="btn btn-outline-primary me-2">GitHub</a>
+              <a href="https://YOUR_USERNAME.github.io/mpage-template/" target="_blank" class="btn btn-demo">Live
+                Demo</a>
             </div>
           </div>
         </div>
 
         <div class="col">
           <div class="card">
-            <img src="projects/lab-reporting-dash/assets/lab-dashboard.svg" class="card-img-top" alt="RRD Fax Dashboard">
+            <img src="projects/lab-reporting-dash/assets/lab-dashboard.svg" class="card-img-top"
+              alt="RRD Fax Dashboard">
             <div class="card-body">
               <h5 class="card-title">RRD Fax Dashboard</h5>
               <p class="card-text">A dashboardfor monitoring faxes sent via RRD.</p>
             </div>
             <div class="card-footer text-end">
-              <a href="https://github.com/YOUR_USERNAME/mpage-template" target="_blank" class="btn btn-outline-primary me-2">GitHub</a>
-              <a href="https://YOUR_USERNAME.github.io/mpage-template/" target="_blank" class="btn btn-demo">Live Demo</a>
+              <a href="https://github.com/YOUR_USERNAME/mpage-template" target="_blank"
+                class="btn btn-outline-primary me-2">GitHub</a>
+              <a href="https://YOUR_USERNAME.github.io/mpage-template/" target="_blank" class="btn btn-demo">Live
+                Demo</a>
             </div>
           </div>
         </div>
       </div>
-
     </section>
 
     <section id="misc1" class="section">
@@ -167,6 +290,67 @@
     &copy; 2025 CBH Consulting LLC
   </footer>
 
+  <modals>
+  <!-- Modal for RRD Fax Dashboard -->
+  <div class="modal fade" id="rrdModal" tabindex="-1" aria-labelledby="rrdModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="rrdModalLabel">RRD Fax Preview</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="rrdModalImg" src="" alt="Large RRD Fax Preview" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for mPage Template Builder -->
+  <div class="modal fade" id="mpageModal" tabindex="-1" aria-labelledby="mpageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="mpageModalLabel">mPage Template Preview</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="mpageModalImg" src="" alt="Large mPage Template Preview" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="inventoryModal" tabindex="-1" aria-labelledby="inventoryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="inventoryModalLabel">Floorstock / Inventory Dashboard Preview</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="inventoryModalImg" src="" alt="Large Inventory Preview" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for CCL Reporting -->
+  <div class="modal fade" id="cclModal" tabindex="-1" aria-labelledby="cclModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cclModalLabel">CCL Report Preview</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="cclModalImg" src="" alt="Large CCL Report Preview" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </div>
+</modals>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     function showSection(id) {
@@ -176,5 +360,41 @@
       document.querySelector(`.nav-link[onclick*='${id}']`).classList.add('active');
     }
   </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.inventory-preview').forEach(function (img) {
+        img.addEventListener('click', function () {
+          var largeImg = this.getAttribute('data-img');
+          document.getElementById('inventoryModalImg').src = largeImg;
+        });
+      });
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Inventory Tracker already handled
+      document.querySelectorAll('.ccl-preview').forEach(function (img) {
+        img.addEventListener('click', function () {
+          var largeImg = this.getAttribute('data-img');
+          document.getElementById('cclModalImg').src = largeImg;
+        });
+      });
+      document.querySelectorAll('.mpage-preview').forEach(function (img) {
+        img.addEventListener('click', function () {
+          var largeImg = this.getAttribute('data-img');
+          document.getElementById('mpageModalImg').src = largeImg;
+        });
+      });
+      document.querySelectorAll('.rrd-preview').forEach(function (img) {
+        img.addEventListener('click', function () {
+          var largeImg = this.getAttribute('data-img');
+          document.getElementById('rrdModalImg').src = largeImg;
+        });
+      });
+    });
+  </script>
 </body>
+
 </html>
