@@ -96,7 +96,47 @@
 
     <section id="projects" class="section">
       <h2>Projects</h2>
-      <div id="projects-table"></div>
+      <div class="row row-cols-1 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="https://via.placeholder.com/800x200?text=Inventory+Tracker" class="card-img-top" alt="Inventory Tracker">
+            <div class="card-body">
+              <h5 class="card-title">Inventory Tracker</h5>
+              <p class="card-text">A browser-based tool to track pharmacy inventory and usage.</p>
+            </div>
+            <div class="card-footer text-end">
+              <a href="https://github.com/YOUR_USERNAME/inventory-tracker" target="_blank" class="btn btn-outline-primary me-2">GitHub</a>
+              <a href="https://YOUR_USERNAME.github.io/inventory-tracker/" target="_blank" class="btn btn-demo">Live Demo</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://via.placeholder.com/800x200?text=CCL+Viewer" class="card-img-top" alt="CCL Viewer">
+            <div class="card-body">
+              <h5 class="card-title">CCL Viewer</h5>
+              <p class="card-text">View, edit, and test Cerner CCL scripts in the browser.</p>
+            </div>
+            <div class="card-footer text-end">
+              <a href="https://github.com/YOUR_USERNAME/ccl-viewer" target="_blank" class="btn btn-outline-primary me-2">GitHub</a>
+              <a href="https://YOUR_USERNAME.github.io/ccl-viewer/" target="_blank" class="btn btn-demo">Live Demo</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://via.placeholder.com/800x200?text=mPage+Template" class="card-img-top" alt="mPage Template">
+            <div class="card-body">
+              <h5 class="card-title">mPage Template Builder</h5>
+              <p class="card-text">A test interface for building and rendering Cerner mPage HTML components.</p>
+            </div>
+            <div class="card-footer text-end">
+              <a href="https://github.com/YOUR_USERNAME/mpage-template" target="_blank" class="btn btn-outline-primary me-2">GitHub</a>
+              <a href="https://YOUR_USERNAME.github.io/mpage-template/" target="_blank" class="btn btn-demo">Live Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="misc1" class="section">
@@ -110,7 +150,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/tabulator-tables@5.5.0/dist/js/tabulator.min.js"></script>
   <script>
     function showSection(id) {
       document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
@@ -118,34 +157,6 @@
       document.getElementById(id).classList.add('active');
       document.querySelector(`.nav-link[onclick*='${id}']`).classList.add('active');
     }
-
-    const table = new Tabulator("#projects-table", {
-      layout: "fitColumns",
-      height: "400px",
-      data: [
-        {
-		  name: "Inventory Tracker", desc: "Tracks pharmacy inventory.", github: "inventory-tracker", demo: "inventory-tracker"
-		},
-        {
-		  name: "CCL Viewer", desc: "View/test Cerner CCL.", github: "ccl-viewer", demo: "ccl-viewer"
-		},
-        {
-		  name: "mPage Template", desc: "Render Cerner mPage components.", github: "mpage-template", demo: "mpage-template"
-		},
-      ],
-      columns: [
-        {title: "Project Name", field: "name"},
-        {title: "Description", field: "desc"},
-        {title: "GitHub", field: "github", formatter: function(cell){
-          var val = cell.getValue();
-          return `<a href='https://github.com/YOUR_USERNAME/${val}' target='_blank'>${val}</a>`;
-        }},
-        {title: "Live Demo", field: "demo", formatter: function(cell){
-          var val = cell.getValue();
-          return `<a href='https://YOUR_USERNAME.github.io/${val}/' target='_blank'>Demo</a>`;
-        }}
-      ]
-    });
   </script>
 </body>
 </html>
