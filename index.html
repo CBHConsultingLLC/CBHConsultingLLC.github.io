@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Project Showcase</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #064B76;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 0.5rem;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #064B76;
+    }
+    .card p {
+      flex-grow: 1;
+    }
+    .card .buttons {
+      margin-top: 1rem;
+    }
+    .card .buttons a {
+      text-decoration: none;
+      color: white;
+      background-color: #F5B218;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      margin-right: 0.5rem;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+    .card .buttons a:hover {
+      background-color: #d49d15;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My GitHub Projects</h1>
+    <p>Test builds, demos, and more.</p>
+  </header>
+
+  <section class="projects">
+    <!-- 🔧 Project 1 -->
+    <div class="card">
+      <h3>Inventory Tracker</h3>
+      <p>A browser-based tool to track pharmacy inventory and usage.</p>
+      <div class="buttons">
+        <a href="https://github.com/YOUR_USERNAME/inventory-tracker" target="_blank">GitHub</a>
+        <a href="https://YOUR_USERNAME.github.io/inventory-tracker/" target="_blank">Live Demo</a>
+      </div>
+    </div>
+
+    <!-- 🔧 Project 2 -->
+    <div class="card">
+      <h3>CCL Viewer</h3>
+      <p>View, edit, and test Cerner CCL scripts in the browser.</p>
+      <div class="buttons">
+        <a href="https://github.com/YOUR_USERNAME/ccl-viewer" target="_blank">GitHub</a>
+        <a href="https://YOUR_USERNAME.github.io/ccl-viewer/" target="_blank">Live Demo</a>
+      </div>
+    </div>
+
+    <!-- 🔧 Project 3 -->
+    <div class="card">
+      <h3>mPage Template Builder</h3>
+      <p>A test interface for building and rendering Cerner mPage HTML components.</p>
+      <div class="buttons">
+        <a href="https://github.com/YOUR_USERNAME/mpage-template" target="_blank">GitHub</a>
+        <a href="https://YOUR_USERNAME.github.io/mpage-template/" target="_blank">Live Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Your Name · GitHub Pages Portfolio
+  </footer>
+</body>
+</html>
