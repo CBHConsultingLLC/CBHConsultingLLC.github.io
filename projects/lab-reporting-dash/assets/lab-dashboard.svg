@@ -1,0 +1,92 @@
+<svg width="800" height="200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <rect width="800" height="200" fill="url(#bg4)"/>
+
+    <!-- Dashboard container -->
+    <rect x="30" y="30" width="740" height="140" fill="#ffffff" rx="8"/>
+    
+    <!-- Order Volume Chart -->
+    <rect x="50" y="70" width="200" height="80" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1" rx="4"/>
+    <text x="150" y="85" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#495057">Order Volume</text>
+
+    <!-- Bar chart -->
+    <rect x="70" y="120" width="15" height="20" fill="#3498db"/>
+    <rect x="90" y="110" width="15" height="30" fill="#3498db"/>
+    <rect x="110" y="105" width="15" height="35" fill="#3498db"/>
+    <rect x="130" y="115" width="15" height="25" fill="#3498db"/>
+    <rect x="150" y="100" width="15" height="40" fill="#3498db"/>
+    <rect x="170" y="95" width="15" height="45" fill="#3498db"/>
+    <rect x="190" y="110" width="15" height="30" fill="#3498db"/>
+    <rect x="210" y="105" width="15" height="35" fill="#3498db"/>
+    
+    <!-- Turnaround Time Chart -->
+    <rect x="280" y="70" width="200" height="80" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1" rx="4"/>
+    <text x="380" y="85" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#495057">Turnaround Time</text>
+    
+    <!-- Spreadsheet grid -->
+    <!-- Header row -->
+    <rect x="290" y="95" width="60" height="12" fill="#e9ecef"/>
+    <rect x="350" y="95" width="60" height="12" fill="#e9ecef"/>
+    <rect x="410" y="95" width="60" height="12" fill="#e9ecef"/>
+    
+    <!-- Header text -->
+    <text x="320" y="104" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="#495057">Test Type</text>
+    <text x="380" y="104" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="#495057">Avg TAT</text>
+    <text x="440" y="104" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="#495057">Status</text>
+
+    <!-- Data rows -->
+    <rect x="290" y="107" width="60" height="10" fill="#ffffff"/>
+    <rect x="350" y="107" width="60" height="10" fill="#ffffff"/>
+    <rect x="410" y="107" width="60" height="10" fill="#ffffff"/>
+    
+    <rect x="290" y="117" width="60" height="10" fill="#f8f9fa"/>
+    <rect x="350" y="117" width="60" height="10" fill="#f8f9fa"/>
+    <rect x="410" y="117" width="60" height="10" fill="#f8f9fa"/>
+    
+    <rect x="290" y="127" width="60" height="10" fill="#ffffff"/>
+    <rect x="350" y="127" width="60" height="10" fill="#ffffff"/>
+    <rect x="410" y="127" width="60" height="10" fill="#ffffff"/>
+    
+    <!-- Data text -->
+    <text x="320" y="115" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#495057">CBC</text>
+    <text x="380" y="115" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#495057">1.2h</text>
+    <text x="440" y="115" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#27ae60">✓</text>
+    
+    <text x="320" y="125" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#495057">CMP</text>
+    <text x="380" y="125" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#495057">2.1h</text>
+    <text x="440" y="125" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#27ae60">✓</text>
+    
+    <text x="320" y="135" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#495057">Lipid</text>
+    <text x="380" y="135" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#495057">3.5h</text>
+    <text x="440" y="135" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#f39c12">!</text>
+    
+    <!-- Grid lines -->
+    <line x1="290" y1="107" x2="470" y2="107" stroke="#dee2e6" stroke-width="1"/>
+    <line x1="290" y1="117" x2="470" y2="117" stroke="#dee2e6" stroke-width="1"/>
+    <line x1="290" y1="127" x2="470" y2="127" stroke="#dee2e6" stroke-width="1"/>
+    <line x1="290" y1="137" x2="470" y2="137" stroke="#dee2e6" stroke-width="1"/>
+    <line x1="350" y1="95" x2="350" y2="137" stroke="#dee2e6" stroke-width="1"/>
+    <line x1="410" y1="95" x2="410" y2="137" stroke="#dee2e6" stroke-width="1"/>
+    
+    <!-- Monthly Metrics -->
+    <rect x="510" y="70" width="240" height="80" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1" rx="4"/>
+    <text x="630" y="85" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#495057">Monthly Metrics</text>
+    
+    <!-- Metric cards -->
+    <rect x="530" y="95" width="60" height="40" fill="#27ae60" rx="3"/>
+    <text x="560" y="110" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="white">Total</text>
+    <text x="560" y="125" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">1,247</text>
+    
+    <rect x="600" y="95" width="60" height="40" fill="#f39c12" rx="3"/>
+    <text x="630" y="110" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="white">Avg TAT</text>
+    <text x="630" y="125" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">2.3h</text>
+    
+    <rect x="670" y="95" width="60" height="40" fill="#9b59b6" rx="3"/>
+    <text x="700" y="110" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="white">Success</text>
+    <text x="700" y="125" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">98.5%</text>
+</svg>
