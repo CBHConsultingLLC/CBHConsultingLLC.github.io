@@ -1,10 +1,7 @@
-# CBH Consulting LLC - GitHub Pages Site
-
-Welcome to the official GitHub Pages site for CBH Consulting LLC!
-
-## [Landing Page](https://cbhconsultingllc.github.io/)
+# [CBH Consulting LLC](https://cbhconsultingllc.github.io/)
 
 This site serves as a portfolio and informational hub for CBH Consulting LLC, showcasing a variety of healthcare, pharmacy, and technology projects.
+
 
 ## License
 
