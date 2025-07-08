@@ -1,15 +1,13 @@
 # Project Components
-/projects/*/assets
-/projects/*/css
-/projects/*/js
-/projects/*/node_modules
-/projects/*/src
+projects/*/css
+projects/*/js
+projects/*/node_modules
+projects/*/src
 projects/fs-inventory-dash/.hintrc
 projects/fs-inventory-dash/index.html
 projects/fs-inventory-dash/package-lock.json
 projects/fs-inventory-dash/package.json
 projects/fs-inventory-dash/vite.config.js
-!projects/fs-inventory-dash/dist/index.html
 
 # Node.js dependencies
 /node_modules/
