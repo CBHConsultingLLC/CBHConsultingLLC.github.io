@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Function to load and display FHIR applications
+/*// Function to load and display FHIR applications
 function loadFHIRApplications() {
   const container = document.getElementById("fhir-apps-container");
   if (!container) {
@@ -234,3 +234,4 @@ function createFHIRAppCard(appData) {
     </div>
   `;
 }
+*/
